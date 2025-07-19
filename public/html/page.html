@@ -65,6 +65,25 @@
     <p class="footer-copyright">&copy; 2025 Amandine Letellier. Tous droits réservés.</p>
   </footer>
   <a href="#hero" class="back-to-top" aria-label="Remonter en haut">&#8679;</a>
+ <script>
+    /*Menu Hamberger*/
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('nav');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  hamburger.classList.toggle('active');
+});
+/*flèche haut*/
+  const backToTop = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });s
+ </script>
   <style>
     /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
@@ -922,25 +941,6 @@ footer.footer-container .footer-copyright {
    margin: 0 auto;
 }
   </style>
-  <script>
-    /*Menu Hamberger*/
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('nav');
-
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  hamburger.classList.toggle('active');
-});
-/*flèche haut*/
-  const backToTop = document.querySelector('.back-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-      backToTop.style.display = 'block';
-    } else {
-      backToTop.style.display = 'none';
-    }
-  });s
-  </script>
   <script src="/public/javascripts/javascripts.js"></script>
 </body>
 </html>
